@@ -1,0 +1,14 @@
+<suite name="TestCases" verbose="1">
+    <test name="Rupeek_Automation_Assignment">
+        <classes>
+            <class name="com.rupeek.testcases.AuthToken_TestCase">
+                <methods>
+                    <include name="authtest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+</suite>
