@@ -7,6 +7,17 @@
                 </methods>
             </class>
 
+            <class name="com.rupeek.testcases.CustomerSearch_TestCase">
+                <methods>
+                    <include name="getUsers"/>
+                    <include name="getUsersByPhoneNo"/>
+                    <include name="getUsersByPhoneNo1"/>
+                    <include name="getUsersNeg"/>
+                    <include name="getUserByPhoneNoNeg"/>
+                </methods>
+            </class>
+
+
         </classes>
     </test>
 

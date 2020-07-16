@@ -81,7 +81,20 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.8.0-beta4</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.bundles</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211_1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20190722</version>
+    </dependency>
+
 
 
 </project>

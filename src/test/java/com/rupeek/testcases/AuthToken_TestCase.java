@@ -7,11 +7,14 @@ import org.apache.http.HttpStatus;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.rupeek.automation.constants.PathConstants;
+import com.rupeek.automation.constants.Constants;
 import com.rupeek.automation.datareader.ExcelReader;
 import com.rupeek.automation.pojo.AuthToken;
 import com.rupeek.automation.utils.RestUtil;
 import java.io.IOException;
+
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertNull;
 
 /**
  * Created by nandita.dubey on 15/07/20.
@@ -39,11 +42,14 @@ public class AuthToken_TestCase {
             req.setUsername(a);
             req.setPassword(b);
             String auh=req.getUsername();
-            response = RestUtil.postCall(req, PathConstants.auth, HttpStatus.SC_OK);
+            response = RestUtil.postCall(req, Constants.auth, HttpStatus.SC_OK);
             String strr=response.asString();
             JsonPath js = new JsonPath(strr);
             token = js.getString("token");
-            System.out.print("token is-------------"+token);
+            log.info("token is-------------"+token);
+
+            //Validation that token should not be null
+            assertNotNull(token,"Token is null");
 
         } catch (Exception e) {
             e.printStackTrace();

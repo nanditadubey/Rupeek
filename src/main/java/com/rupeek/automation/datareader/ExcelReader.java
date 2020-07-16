@@ -1,6 +1,6 @@
 package com.rupeek.automation.datareader;
 
-import com.rupeek.automation.constants.PathConstants;
+import com.rupeek.automation.constants.Constants;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -23,7 +23,7 @@ public class ExcelReader {
 
     public Object[][] getExcelData(String sheettest) throws IOException {
         Object[][] data;
-        FileInputStream fis = new FileInputStream(PathConstants.excelloc);
+        FileInputStream fis = new FileInputStream(Constants.excelloc);
         wb = new XSSFWorkbook(fis);
         sheet = wb.getSheet(sheettest);
         row = sheet.getRow(0);
